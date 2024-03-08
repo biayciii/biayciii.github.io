@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* CSS để chia cột */
+        .column {
+            float: left;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/action_page.php" method="post">
+        <table>
+            <!-- Username -->
+            <tr>
+                <td align="right">Username:</td>
+                <td><input type="text" name="txtUsername" value="" size="35"></td>
+            </tr>
+            <!-- Password -->
+            <tr>
+                <td align="right">Password:</td>
+                <td><input type="password" name="txtPassword" value="" size="35"></td>
+            </tr>
+            <!-- Re-type Password -->
+            <tr>
+                <td align="right">Re-type Password:</td>
+                <td><input type="password" name="txtRePassword" value="" size="30"></td>
+            </tr>
+            <!-- Birthday -->
+            <tr>
+                <td align="right">Birthday:</td>
+                <td>
+                    <select name="month">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <!-- Add other months here -->
+                    </select>,
+                    <input type="text" name="txtDay" value="" size="2">,
+                    <input type="text" name="txtYear" value="" size="4">(Month, Day, Year)
+                </td>
+            </tr>
+            <!-- Images -->
+            <tr>
+                <td align="right">Images:</td>
+                <td><input type="file" name="fileUpload"></td>
+            </tr>
+            <!-- First name -->
+            <tr>
+                <td align="right">First name:</td>
+                <td><input type="text" name="txtFirstname" value="" size="15"></td>
+            </tr>
+            <!-- Last name -->
+            <tr>
+                <td align="right">Last name:</td>
+                <td><input type="text" name="txtLastname" value="" size="15"></td>
+            </tr>
+            <!-- Interests -->
+            <tr>
+                <td align="right">Interests (optional):</td>
+                <td>
+                    <div class="column">
+                        <input type="checkbox" id="Entertainment" name="interests" value="Entertainment">
+                        <label for="Entertainment">Entertainment</label><br>
+                        <input type="checkbox" id="Home_Family" name="interests" value="Home & Family">
+                        <label for="Home_Family">Home & Family</label><br>
+                        <!-- Add other interests here -->
+                    </div>
+                    <div class="column">
+                        <input type="checkbox" id="Health" name="interests" value="Health">
+                        <label for="Health">Health</label><br>
+                        <input type="checkbox" id="Music" name="interests" value="Music">
+                        <label for="Music">Music</label><br>
+                        <!-- Add other interests here -->
+                    </div>
+                </td>
+            </tr>
+            <!-- Submit Button -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="send" value="REGISTER">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

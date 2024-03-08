@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  input[type="text"], input[type="password"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 0;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Registration Form</h2>
+  <form id="registrationForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="usa">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="canada">Canada</option>
+      <!-- Add more countries here -->
+    </select>
+
+    <input type="submit" value="Register">
+  </form>
+</div>
+
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+  
+  // Collect form data
+  var formData = new FormData(this);
+  
+  // You can process the form data here, for example, you can send it to a server using AJAX
+  
+  // For this example, let's just log the data to the console
+  formData.forEach(function(value, key) {
+    console.log(key + ": " + value);
+  });
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>REGISTRATION</title> 
+    
+    <style>
+        body {
+            color: #007bff;
+            margin-left: 20px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        input[type="submit"] {
+            width: 200px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkred;
+        }
+
+        table,
+        th,
+        td {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: brown;">REGISTRATION</h1>
+<hr>
+    <form action="/action_page.php" method="post">
+        <table>
+            <tr>
+                <td align="right">Username:</td>
+                <td>
+                    <input type="text" name="txtUsername" value="" size="35">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Password:</td>
+                <td>
+                    <input type="password" name="txtPassword" value="" size="35">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Re-type Password:</td>
+                <td>
+                    <input type="password" name="txtRePassword" value="" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+  <hr>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Birthday:</td>
+                <td>
+                    <select name="month">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>,
+                    <input type="text" name="txtDay" value="" size="2">,
+                    <input type="text" name="txtYear" value="" size="4">(Month, Day, Year)
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Images:</td>
+                <td>
+                    <input type="file" name="fileUpload">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">First name:</td>
+                <td>
+                    <input type="text" name="txtFirstname" value="" size="15">
+                </td>
+                <td align="right">Last name:</td>
+                <td>
+                    <input type="text" name="txtLastname" value="" size="15">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Interests (optional):</td>
+                <td colspan="3">
+                    <div class="column">
+                        <input type="checkbox" id="Entertainment" name="Entertainment" value="Entertainment">
+                        <label for="Entertainment">Entertainment</label><br>
+                        <input type="checkbox" id="Home_Family" name="Home_Family" value="Home & Family">
+                        <label for="Home_Family">Home & Family</label><br>
+                        <input type="checkbox" id="Health" name="Health" value="Health">
+                        <label for="Health">Health</label><br>
+                        <input type="checkbox" id="Music" name="Music" value="Music">
+                        <label for="Music">Music</label><br>
+                    </div>
+                    <div class="column">
+                        <input type="checkbox" id="Business" name="Business" value="Business">
+                        <label for="Business">Business</label><br>
+                        <input type="checkbox" id="Computer_Technology" name="Computer_Technology"
+                            value="Computer & Technology">
+                        <label for="Computer_Technology">Computer & Technology</label><br>
+                        <input type="checkbox" id="Personal_Finance" name="Personal_Finance" value="Personal Finance">
+                        <label for="Personal_Finance">Personal Finance</label><br>
+                        <input type="checkbox" id="Small_Business" name="Small_Business" value="Small Business">
+                        <label for="Small_Business">Small Business</label><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">
+                    <hr>
+                    <input type="submit" name="send" value="REGISTER">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
