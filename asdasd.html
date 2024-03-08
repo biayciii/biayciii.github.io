@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Untitled Document </title>
+     <style type="text/css">
+        TD {
+            font-weight: bold;
+        }
+     </style>
+    </head>
+    <body>
+        <form action="" method="POST" name="frmApp">
+     <table border="0" align="center" width="550" cellpadding="0" cellpadding="1" bgcolor="#000066">
+        <tr>
+          <td align="right" height="50">
+            <i><font color="#FFFFFF" size="4"><b>APPLICATION FORM</caption></b></font></i>&nbsp;
+          </td>  
+        </tr> 
+        <td align="center" bgcolor="#FFFFFF"><br>
+        <table align="center" border="0">
+            <tr>
+                <td colspan="2" align="right"></td>
+            </tr>
+            <tr>
+                <td align="right">First Name :&nbsp;</td>
+                <td>
+                    <input type="text" name="txtName" value="" size="35">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Age :&nbsp;</td>
+                <td>
+                    <input type="number" name="txtAge" value="" size="35">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Region :&nbsp;</td>
+                <td>
+                    <input type="checkbox" name="cbo1" value="yes">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="cbo2" value="no">No
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Sex :&nbsp;</td>
+                <td>
+                    <input type="checkbox" name="cbo1" value="male">Male &nbsp;
+                    <input type="checkbox" name="cbo2" value="women">Women 
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Salary :&nbsp;</td>
+                <td><input type="text" name="Salary" value="" size="35"></td>
+            </tr>
+            <tr>
+                <td align="right">District :&nbsp;</td>
+                <td>
+                    <select name="Country">
+                        <option value="tinh">Tinh</option>
+                    <option value="NamDinh">Nam Dinh</option>
+                    <option value="Laocai">Lao cai</option>
+                    <option value="Hanoi">Ha noi</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td height="5"></td>
+                <td></td>
+            </tr>
+           
+            <tr>
+                <td>Time</td>
+                <td><input type="time" name="time_control" /></td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>0<input type="range" name="range_control" min="0" max="12" value="0" />
+                <output for="range_control" name="range_control_value">12</output></td>
+                <tr>
+                    <td>FAvourite color:</td>
+                    <td><input type="color" name="color_control"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="send" value="SUBMIT"
+                    </td>
+                </tr>
+        </table><br>
+    
+        </form>
+    </body>
+</html>
