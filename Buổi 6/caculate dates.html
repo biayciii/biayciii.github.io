@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> duolynnh </title>
+        <script language="javascript">
+            function isLeapYear(n) {
+                return (n%4==0 && n%100!=0) || n%400==0;
+            }
+            function update() {
+                year = document.f.year;
+                month = document.f.month;
+                date = document.f.date;
+                if(year.value=="" || isNaN(year.value)) {
+                    date.value = "year must a number";
+                    year.focus();
+                } else 
+                switch(month.value) {
+                    case "1":
+                    case "3":
+                    case "5":
+                    case "7":
+                    case "8":
+                    case "10":
+                    case "12":
+                     date.value = 31;
+                     break;
+                     case "4":
+                     case "6":
+                     case "9":
+                     case "11":
+                     date.value = 30;
+                     break;
+                     case "2":
+                     date.value = isLeapYear(year.value)? 29: 28;
+                     break;
+                }
+            }
+        </script>
+    </head>
+    <body onload="update()">
+    <form name="f">
+        <table border="0" align="center">
+            <tr><td colspan="2" align="center">
+                <h2>DATES IN MONTH</h2> </td></tr>
+                <tr><td align="right">Year: </td>
+                    <td><input name="year" value="2017"
+                    onblur="update()" /></td>
+                </tr>
+                <tr><td align="right">Month: </td>
+                    <td><select name="month" onblur="update()">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                     </select>
+                    </td></tr>
+                    <tr><td align="right">date: </td>
+                    <td><input name="date" readonly="readonly" /></td>
+                </tr>
+        </table>
+    </form></body>
+</html>

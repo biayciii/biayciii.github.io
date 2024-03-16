@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> duolynnhism </title>
+        <script language="javascript">
+            function display() {
+                debugger;
+                a = document.f.a;
+                var txt = document.getElementById("view_area").contentWindow;
+                txt.document.body.innerHTML = "";
+                if(a.value == "" || isNaN(a.value))
+                txt.document.write("<font color='red'>You must enter a number</font>");
+            else {
+                txt.document.write("<b>Multiplication table" + a.value + ":</b><br/>");
+                for(i=1; i<=10; i++)
+                txt.document.write(a.value + "x" + i + "=" + (i*a.value) + "<br/>");
+            }
+
+        }
+
+        </script>
+    </head>
+    <body>
+        <form name="f">
+            <table border="0" align="center">
+                <tr><td colspan="2" align="center">
+                  <h2> chíp chíp chiu chíp chiu</h2>  
+                </td></tr>
+                <tr><td align="right">
+                    bên này bên này 1 con chim xanh kêu chíp chíp chiu</td>
+               
+                <td><input name="a" size="5" onchange="display()"/></td></tr>
+                <tr><td colspan="2" align="center">
+                    <iframe id="view_area" width="230" height="250"></iframe>
+                </td></tr>
+            </table>
+        </form>
+    </body>
+</html>

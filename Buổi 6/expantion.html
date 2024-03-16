@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> em quyền sv</title>
+</head>
+<body>
+        <input type="text" id="txta">
+        <input type="text" id="txtb">
+        <button onclick="ditmeemquyen();">
+         bấm
+        </button>
+</body>
+<script>
+         function ditmeemquyen() {
+            var txta = document.getElementById('txta').value;
+            var txtb = document.getElementById('txtb').value;
+         
+            if(txta == null || txta == "" || isNaN(txta)) {
+                alert("Number A is formatted incorrect");
+                return;
+            } 
+             if(txtb == null || txtb == "" || isNaN(txtb)) {
+                alert("Number B is formatted incorrect");
+                return;
+            } 
+            alert(parseFloat(txta)) + (parseFloat(txtb));
+        }
+            
+ </script>
+  
+</html>

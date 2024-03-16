@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> mini calculator</title>
+        <script language="javascript">
+            function calculate () {
+                var a = document.frmCal.txta;
+                var b = document.frmCal.txtb;
+                var o = document.frmCal.sito;
+                var r = document.frmCal.txtr;
+
+                var numberFomart = /^[+-]?\d+(\.\d+)?$/;
+                if(numberFomart.test(a.value) == false) {
+                    alert("a must be a number!");
+                    a.focus();
+                  } else if(numberFomart.test(b.value) == false) {
+                    alert("b must be a number!");
+                    b.focus();
+                  }
+             
+                else if((o.value=="/" || o.value=="%") && parseInt(b.value)==0) {
+                alert("b can't be 0!");
+                r.value = "";
+                b.focus();
+            } else 
+            r.value = eval(a.value + o.value + b.value);
+        
+        </script>
+    </head>
+    <body>
+        <form name="frmCal">
+            <table border="0" align="center">
+                <tr><td colspan="2" align="center">
+                    <h2> ádasdasdasdas</h2>
+                </td></tr>
+                <tr><td align="right">a = </td>
+                <td><input name="txta" /></td></tr>
+                <tr><td align="right">b = </td>
+                <td><input name="txtb" /></td></tr>
+                <tr><td align="right">operarion: </td>
+                <td><select name="slto">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+
+                </select>
+            </td></tr>
+            <tr><td align="right">result: </td>
+            <rd><input name="txtr" readonly /></rd></tr>
+            <tr><td colspan="2" align="center">
+                <input type="button" value="calculate"
+                onClick="calculate()">
+            </td></tr>
+            </table>
+        </form>
+    </body>
+</html>
