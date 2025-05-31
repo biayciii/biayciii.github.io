@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website of Biayciii</title>
+  <link rel="stylesheet" href="Anhbac.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng nhập hệ thống</h2>
+    <div id="login-form">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required />
+      <input type="password" id="password" placeholder="Mật khẩu" required />
+      <button onclick="login()">Đăng nhập</button>
+      <p id="message" class="error"></p>
+      
+    </div>
+
+    <div id="qrcode" style="display: none;">
+      <h3>QR Code của bạn:</h3>
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="Anhbac.js"></script>
+</body>
+</html>
